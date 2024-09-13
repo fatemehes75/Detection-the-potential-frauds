@@ -1,13 +1,76 @@
 # Credit Card Fraud Detection
 
-This project focuses on using a credit card transaction dataset to perform exploratory data analysis (EDA) and build a machine learning model to predict fraudulent transactions. The dataset contains detailed information about transactions, card usage, and cardholder details. Originally in JSON format and saved as a text file, the dataset comprises 29 columns and 786,363 rows.
+## Introduction
+This project focuses on detecting fraudulent credit card transactions using a dataset that contains transaction, card usage, and customer details. The goal is to explore transaction patterns and build a machine learning model to predict fraud.
 
-# Objective
-The primary goal is to gain insights into transaction patterns, such as multiple card swipes, amount reversals, and trends related to transaction amounts. Ultimately, the project aims to build an accurate model capable of predicting whether a given transaction is fraudulent.
+## Dataset Overview
+- **Format**: JSON (saved as text file)
+- **Rows**: 786,363
+- **Columns**: 29
+- **Source**: kaggle
 
-# Dataset Overview
-Format: JSON
-Size: 29 columns, 786,363 rows
-Source: Kaggale
-## Context
-Fraud detection is a critical concern for banking and financial institutions, as well as for their customers. Quickly and accurately identifying fraudulent activity helps prevent financial loss and builds trust. In this project, the objective is to create a machine learning model that can effectively classify transactions as either fraudulent or legitimate, ensuring better security and risk management in financial systems.
+## Column Descriptions
+| Column Name               | Description                                                 |
+|---------------------------|-------------------------------------------------------------|
+| `accountNumber`            | Unique ID for the credit card account                       |
+| `customerId`               | Unique customer identifier                                  |
+| `creditLimit`              | Maximum credit limit available for the account              |
+| `availableMoney`           | Remaining balance of credit after transactions              |
+| `transactionDateTime`      | Timestamp of the transaction (YYYY-MM-DDTHH:MM:SS)          |
+| `transactionAmount`        | Amount spent in the transaction                             |
+| `merchantName`             | Merchant where the transaction occurred                     |
+| `acqCountry`               | Country of the acquiring bank                               |
+| `merchantCountryCode`      | Merchant's country code                                     |
+| `posEntryMode`             | Mode of card entry (e.g., swipe, chip)                      |
+| `posConditionCode`         | Condition of the transaction (e.g., in-store, online)       |
+| `merchantCategoryCode`     | Type of merchant (e.g., rideshare, restaurant)              |
+| `currentExpDate`           | Card expiration date (MM/YYYY)                              |
+| `accountOpenDate`          | Date when the account was opened                            |
+| `dateOfLastAddressChange`  | Date of the last address update on the account              |
+| `cardCVV`                  | Security CVV code of the card                               |
+| `enteredCVV`               | CVV code entered during the transaction                     |
+| `cardLast4Digits`          | Last four digits of the credit card                         |
+| `transactionType`          | Type of transaction (e.g., purchase, refund)               |
+| `currentBalance`           | Current balance on the credit card account                  |
+| `merchantCity`             | Merchant's city location                                    |
+| `merchantState`            | Merchant's state location                                   |
+| `merchantZip`              | Merchant's ZIP/postal code                                  |
+| `cardPresent`              | Whether the card was physically present during the transaction |
+| `posOnPremises`            | Whether the transaction occurred on the merchant's premises |
+| `recurringAuthInd`         | Indicates if the transaction is a recurring authorization   |
+| `expirationDateKeyInMatch` | Whether the entered expiration date matched the actual card |
+| `isFraud`                  | Whether the transaction is flagged as fraud                 |
+
+## Exploratory Data Analysis (EDA)
+This project aims to uncover the following insights:
+- Patterns in transaction amounts (e.g., large or unusual purchases)
+- Multiple card swipes in short timeframes
+- Amount reversals or chargebacks
+- Fraud trends based on transaction time, location, and card usage
+
+## Modeling
+We will use various machine learning techniques (e.g., logistic regression, decision trees, random forests) to predict fraudulent transactions. Performance metrics such as accuracy, precision, recall, and F1 score will be used to evaluate the models.
+
+## Installation/Usage
+
+### Prerequisites
+- Python 3.x
+- Install dependencies via pip:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Run EDA
+1. To perform exploratory data analysis:
+    ```bash
+    python eda.py
+    ```
+
+### Train Model
+2. To train the machine learning model:
+    ```bash
+    python train_model.py
+    ```
+
+## License
+This project is licensed under the MIT License.
