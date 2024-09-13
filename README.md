@@ -41,6 +41,17 @@ This project focuses on detecting fraudulent credit card transactions using a da
 | `expirationDateKeyInMatch` | Whether the entered expiration date matched the actual card |
 | `isFraud`                  | Whether the transaction is flagged as fraud                 |
 
+
+## Data Cleaning
+The data needs to be cleaned before performing any analysis or building a model. The following steps outline the data-cleaning process:
+
+1. **Remove Missing or Invalid Data**
+2. **Handle Duplicates**
+3. **Fix Inconsistent Entries**
+4. **Fix Columns Types**
+5. **Outlier Detection**
+6. **Normalize/Scale Data**
+
 ## Exploratory Data Analysis (EDA)
 This project aims to uncover the following insights:
 - Patterns in transaction amounts (e.g., large or unusual purchases)
