@@ -47,10 +47,9 @@ The data needs to be cleaned before performing any analysis or building a model.
 
 1. **Remove Missing or Invalid Data**
 2. **Handle Duplicates**
-3. **Fix Inconsistent Entries**
-4. **Fix Columns Types**
-5. **Outlier Detection**
-6. **Normalize/Scale Data**
+3. **Fix Columns Types**
+4. **Outlier Detection**
+5. **Normalize/Scale Data**
 
 ## Exploratory Data Analysis (EDA)
 This project aims to uncover the following insights:
