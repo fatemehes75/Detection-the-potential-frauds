@@ -59,28 +59,7 @@ This project aims to uncover the following insights:
 - Fraud trends based on transaction time, location, and card usage
 
 ## Modeling
-We will use various machine learning techniques (e.g., logistic regression, decision trees, random forests) to predict fraudulent transactions. Performance metrics such as accuracy, precision, recall, and F1 score will be used to evaluate the models.
+- Random Forest
+- XGBoost
 
-## Installation/Usage
 
-### Prerequisites
-- Python 3.x
-- Install dependencies via pip:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Run EDA
-1. To perform exploratory data analysis:
-    ```bash
-    python eda.py
-    ```
-
-### Train Model
-2. To train the machine learning model:
-    ```bash
-    python train_model.py
-    ```
-
-## License
-This project is licensed under the MIT License.
